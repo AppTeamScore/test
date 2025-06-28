@@ -55,20 +55,20 @@ export const DEFAULT_CONFIG = {
 
   enableCodeFold: true, // code fold config
 
-  disablePromptHint: false,
+  disablePromptHint: true,
 
-  dontShowMaskSplashScreen: false, // dont show splash screen when create chat
-  hideBuiltinMasks: false, // dont add builtin masks
+  dontShowMaskSplashScreen: true, // dont show splash screen when create chat
+  hideBuiltinMasks: true, // dont add builtin masks
 
   customModels: "",
   models: DEFAULT_MODELS as any as LLMModel[],
 
   modelConfig: {
     model: "gpt-4o-mini" as ModelType,
-    providerName: "OpenAI" as ServiceProvider,
-    temperature: 0.5,
+    providerName: "Azure" as ServiceProvider,
+    temperature: 0.6,
     top_p: 1,
-    max_tokens: 4000,
+    max_tokens: 128000,
     presence_penalty: 0,
     frequency_penalty: 0,
     sendMemory: true,
@@ -94,8 +94,8 @@ export const DEFAULT_CONFIG = {
 
   realtimeConfig: {
     enable: false,
-    provider: "OpenAI" as ServiceProvider,
-    model: "gpt-4o-realtime-preview-2024-10-01",
+    provider: "Azure" as ServiceProvider,
+    model: "gpt-4o-mini",
     apiKey: "",
     azure: {
       endpoint: "",
